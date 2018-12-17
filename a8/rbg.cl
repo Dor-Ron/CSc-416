@@ -167,10 +167,10 @@
     (format t "fitness-g = ~A~%" (funcall fitness rbg-str))
 )
  
- ; TASK 6 - The Individual Class
+; TASK 6 - The Individual Class
 
- ; class definition for individual
- (defclass individual ()
+; class definition for individual
+(defclass individual ()
 	(
 		(rbg-string :accessor individual-rbg-string :initarg :rbg-string)
 		(fitness :accessor individual-fitness :initarg :fitness)
@@ -313,6 +313,7 @@
 		(cond
 			(
                 (> (funcall *fitness* i) max-value)
+				
                 (setf max-value (funcall *fitness* i))
                 (setf max-individual i)
 			)
